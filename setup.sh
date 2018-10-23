@@ -21,12 +21,12 @@ function install {
   wget --quiet -c http://ftp.us.debian.org/debian/pool/main/libp/libpng/libpng12-0_1.2.50-2+deb8u3_amd64.deb
 
   echo "Extracting..."
-  sudo alien -t ja2-stracciatella_0.16.1_amd64.deb
+  7z x ja2-stracciatella_0.16.1_amd64.deb
   rm ja2-stracciatella_0.16.1_amd64.deb
+  tar xvf data.tar
+  rm data.tar
 
   echo "Installing..."
-  tar xfz ja2-stracciatella-0.16.1.tgz
-  sudo rm ja2-stracciatella-0.16.1.tgz
   mv usr ja2
   echo "install libpng12 manually, i.e:"
   echo "  sudo apt install libpng12-0_1.2.50-2+deb8u3_amd64.deb"
